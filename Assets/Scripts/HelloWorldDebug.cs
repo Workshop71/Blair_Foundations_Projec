@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class HelloWorldDebug : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void start()
+   
+    void OnEnable()
     {
         Debug.Log("Hello World");
+        
+    }
 
+     void OnDisable()
+    {
+        Debug.Log("Goodbye World");
     }
 }
