@@ -3,6 +3,7 @@ using UnityEngine;
 public class TransformTranslate : MonoBehaviour
 {
     public float movementSpeed;
+    public float rotationSpeed;
     void Start()
     {
         
@@ -54,5 +55,13 @@ public class TransformTranslate : MonoBehaviour
         {
             transform.Translate(-transform.up*movementSpeed*Time.deltaTime);
         }
+        if (Input.GetKey(KeyCode.E))
+        {
+            transform.Rotate(-transform.up*rotationSpeed*Time.deltaTime);
+        }if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Rotate(transform.up*rotationSpeed*Time.deltaTime);
+        }
+
     }
 }
