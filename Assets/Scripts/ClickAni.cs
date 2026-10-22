@@ -11,7 +11,7 @@ public class ClickAni : MonoBehaviour
 
     void OnMouseDown()
     {
-        LadyGaga.SetBool("Cube", true);
+        LadyGaga.SetBool("IsClicked", true);
     
     }
 }
