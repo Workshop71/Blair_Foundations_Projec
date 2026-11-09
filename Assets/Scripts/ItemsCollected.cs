@@ -15,7 +15,7 @@ public class ItemsCollected : MonoBehaviour
     public GameObject sugarFound;
 
     public int ingredientsCollected = 0;
-
+    
     public void Collecteditem()
     {
         ingredientsCollected++;
@@ -32,52 +32,32 @@ public class ItemsCollected : MonoBehaviour
     {
         if(ingredientsCollected == 1)
         {
-        Milk.SetActive(false);
-        }
-        {
+       
         MilkFound.SetActive(true);    
-        }
-        {
         Flour.SetActive(true);
         }
         if(ingredientsCollected == 2)
         {
-        Flour.SetActive(false);
-        }
-        {
+        
         FlourFound.SetActive(true);    
-        }
-        {
         sugar.SetActive(true);
         }
         if(ingredientsCollected == 3)
         {
-        sugar.SetActive(false);
-        }
-        {
+        
         sugarFound.SetActive(true);    
-        }
-        {
         Eggs.SetActive(true);
         }
         if(ingredientsCollected == 4)
         {
-        Eggs.SetActive(false);
-        }
-        {
+        
         EggsFound.SetActive(true);    
-        }
-        {
         Vanilla.SetActive(true);
         }
         if(ingredientsCollected == 5)
         {
-        Vanilla.SetActive(false);
-        }
-        {
+        
         VanillaFound.SetActive(true);    
-        }
-        {
         Flour.SetActive(true);
         }
     }
