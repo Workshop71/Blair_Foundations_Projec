@@ -8,7 +8,7 @@ public class SugarCollected : MonoBehaviour
     public GameObject sugar;
     public void CollectedItem()
     {
-    itemsCollected.Collecteditem();    
+    itemsCollected.CollectedAssets();    
     }
 
     void OnMouseDown()

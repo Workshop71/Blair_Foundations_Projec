@@ -8,7 +8,7 @@ public class FlourCollected : MonoBehaviour
     public GameObject Flour;
     public void CollectedItem()
     {
-    itemsCollected.Collecteditem();    
+    itemsCollected.CollectedAssets();    
     }
 
     void OnMouseDown()

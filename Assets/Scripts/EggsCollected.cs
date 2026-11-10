@@ -8,7 +8,7 @@ public class EggsCollected : MonoBehaviour
     public GameObject Eggs;
     public void CollectedItem()
     {
-    itemsCollected.Collecteditem();    
+    itemsCollected.CollectedAssets();    
     }
 
     void OnMouseDown()

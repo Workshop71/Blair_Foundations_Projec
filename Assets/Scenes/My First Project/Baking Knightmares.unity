@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e9d2c23c0930b4f92d16c9d17df709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlourCollected
-  itemsCollected: {fileID: 447117522}
+  itemsCollected: {fileID: 129795537}
   Flour: {fileID: 34452641}
 --- !u!1 &36671231
 GameObject:
@@ -580,6 +580,8 @@ MonoBehaviour:
   FlourFound: {fileID: 0}
   VanillaFound: {fileID: 0}
   sugarFound: {fileID: 0}
+  Cake: {fileID: 0}
+  CakeBaked: {fileID: 0}
   ingredientsCollected: 0
 --- !u!114 &78046613
 MonoBehaviour:
@@ -703,6 +705,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 3d7ab3c805c938b4d8fa2adcbc995ee5, type: 2}
+    - target: {fileID: -5869470556799372738, guid: d1d1b75a282341146934dd41ec6c4b16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5175799266490053748, guid: d1d1b75a282341146934dd41ec6c4b16, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1016,9 +1022,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4001070855551978184, guid: d1d1b75a282341146934dd41ec6c4b16, type: 3}
       insertIndex: -1
       addedObject: {fileID: 744730823}
-    - targetCorrespondingSourceObject: {fileID: -3477360771970593475, guid: d1d1b75a282341146934dd41ec6c4b16, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 447117522}
     - targetCorrespondingSourceObject: {fileID: 1750519539881795442, guid: d1d1b75a282341146934dd41ec6c4b16, type: 3}
       insertIndex: -1
       addedObject: {fileID: 269470334}
@@ -1201,6 +1204,58 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2700005, y: 2.5400002, z: 1.2700003}
   m_Center: {x: 0.00000032782555, y: -1.2705494e-21, z: 0.63500005}
+--- !u!1 &129795532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+  m_PrefabInstance: {fileID: 1310977353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &129795534
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129795532}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a90bfc8da147c144090bc0075ee92a85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &129795537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129795532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2da3c81c83557742941623e13bf7e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemsCollected
+  Milk: {fileID: 925423248}
+  Eggs: {fileID: 1684292204}
+  Flour: {fileID: 34452641}
+  Vanilla: {fileID: 1900624797}
+  sugar: {fileID: 1610666485}
+  MilkFound: {fileID: 1804588830}
+  EggsFound: {fileID: 1631656196}
+  FlourFound: {fileID: 734690698}
+  VanillaFound: {fileID: 1392719956}
+  sugarFound: {fileID: 223120968}
+  Cake: {fileID: 2130829600}
+  CakeBaked: {fileID: 1563733554}
+  ingredientsCollected: 0
 --- !u!1 &160149071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0cbdb3a7617f2214a883e9bec6e5921c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1774,7 +1829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 459f1206363f5a04a80f691eaa88528b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2093,34 +2148,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0490491, y: 1.0490494, z: 1.0490494}
   m_Center: {x: 0, y: 0, z: 0.41910008}
---- !u!1 &447117518 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3477360771970593475, guid: d1d1b75a282341146934dd41ec6c4b16, type: 3}
-  m_PrefabInstance: {fileID: 88823219}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &447117522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447117518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2da3c81c83557742941623e13bf7e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemsCollected
-  Milk: {fileID: 925423248}
-  Eggs: {fileID: 1684292204}
-  Flour: {fileID: 34452641}
-  Vanilla: {fileID: 1900624797}
-  sugar: {fileID: 1610666485}
-  MilkFound: {fileID: 1804588830}
-  EggsFound: {fileID: 1631656196}
-  FlourFound: {fileID: 734690698}
-  VanillaFound: {fileID: 1900624797}
-  sugarFound: {fileID: 223120968}
-  ingredientsCollected: 0
 --- !u!1 &447845520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2178,7 +2205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f05a834ac50ba56469f2ff79d148f55d, type: 3}
+  m_Texture: {fileID: 2800000, guid: b443aacb6d3ad62489327370fb8d7eb3, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2345,7 +2372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6870b8e040ec24249902a82577bef88f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4431670454091400558, guid: 6870b8e040ec24249902a82577bef88f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2442,7 +2469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0cbdb3a7617f2214a883e9bec6e5921c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2537,6 +2564,8 @@ MonoBehaviour:
   FlourFound: {fileID: 0}
   VanillaFound: {fileID: 0}
   sugarFound: {fileID: 0}
+  Cake: {fileID: 0}
+  CakeBaked: {fileID: 0}
   ingredientsCollected: 0
 --- !u!114 &678714329
 MonoBehaviour:
@@ -2642,7 +2671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 459f1206363f5a04a80f691eaa88528b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2861,7 +2890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53a33a425f68834e9b0abbd4dcadac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MilkCollected
-  itemsCollected: {fileID: 447117522}
+  itemsCollected: {fileID: 129795537}
   ClickObjToDestroy: {fileID: 925423248}
 --- !u!1 &1079217686
 GameObject:
@@ -3296,6 +3325,103 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2699999, y: 2.5400002, z: 1.2700003}
   m_Center: {x: 0.00000020861626, y: -0.00000023841858, z: 0.63500005}
+--- !u!1001 &1310977353
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.0607
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.0607
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.0607
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.208
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.263
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.806
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7202375984043751186, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d7ab3c805c938b4d8fa2adcbc995ee5, type: 2}
+    - target: {fileID: -5730168626596553650, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4a5a85c446a2634c913d3606f14e638, type: 2}
+    - target: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_Name
+      value: Cake
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100336730977582205, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2130829603}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2130829602}
+    - targetCorrespondingSourceObject: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 129795534}
+    - targetCorrespondingSourceObject: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 129795537}
+  m_SourcePrefab: {fileID: 100100000, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
 --- !u!1001 &1372892648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3440,7 +3566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6870b8e040ec24249902a82577bef88f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4431670454091400558, guid: 6870b8e040ec24249902a82577bef88f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -3508,6 +3634,8 @@ MonoBehaviour:
   FlourFound: {fileID: 0}
   VanillaFound: {fileID: 0}
   sugarFound: {fileID: 0}
+  Cake: {fileID: 0}
+  CakeBaked: {fileID: 0}
   ingredientsCollected: 0
 --- !u!114 &1392719959
 MonoBehaviour:
@@ -3811,7 +3939,7 @@ Transform:
   m_GameObject: {fileID: 1493530391}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.0758076, y: 1.4122231, z: -1.772644}
+  m_LocalPosition: {x: 5.0758076, y: 1.573, z: -1.772644}
   m_LocalScale: {x: 1.2639599, y: 1.2639601, z: 1.2639601}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -3885,6 +4013,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2699999, y: 2.5400002, z: 1.2700003}
   m_Center: {x: -0.00000002980232, y: -0.00000029802322, z: 0.63500005}
+--- !u!1 &1563733554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+  m_PrefabInstance: {fileID: 1958442458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1571660420 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6439715266770899891, guid: d1d1b75a282341146934dd41ec6c4b16, type: 3}
@@ -3993,7 +4126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8adbeff4feee60a46b8b961488a05e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SugarCollected
-  itemsCollected: {fileID: 447117522}
+  itemsCollected: {fileID: 129795537}
   sugar: {fileID: 1610666485}
 --- !u!1 &1616060228
 GameObject:
@@ -4208,7 +4341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 25d5aafcc78f8474d96b87f3e848d50f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2305302597091861298, guid: 25d5aafcc78f8474d96b87f3e848d50f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -4393,7 +4526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c6d693f40e43cf4e89e8b2ad3c12ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EggsCollected
-  itemsCollected: {fileID: 447117522}
+  itemsCollected: {fileID: 129795537}
   Eggs: {fileID: 1684292204}
 --- !u!1 &1722016578
 GameObject:
@@ -4734,6 +4867,8 @@ MonoBehaviour:
   FlourFound: {fileID: 0}
   VanillaFound: {fileID: 0}
   sugarFound: {fileID: 0}
+  Cake: {fileID: 0}
+  CakeBaked: {fileID: 0}
   ingredientsCollected: 0
 --- !u!114 &1743493720
 MonoBehaviour:
@@ -4891,7 +5026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0d13a49c6d9f2af4abe43d356f091c81, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8424073627695423409, guid: 0d13a49c6d9f2af4abe43d356f091c81, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -4942,6 +5077,8 @@ MonoBehaviour:
   FlourFound: {fileID: 0}
   VanillaFound: {fileID: 0}
   sugarFound: {fileID: 0}
+  Cake: {fileID: 0}
+  CakeBaked: {fileID: 0}
   ingredientsCollected: 0
 --- !u!65 &1804588832
 BoxCollider:
@@ -5087,6 +5224,8 @@ MonoBehaviour:
   FlourFound: {fileID: 0}
   VanillaFound: {fileID: 0}
   sugarFound: {fileID: 0}
+  Cake: {fileID: 0}
+  CakeBaked: {fileID: 0}
   ingredientsCollected: 0
 --- !u!65 &1900624802
 BoxCollider:
@@ -5121,7 +5260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b98cdb31292c4419c57e66b3873896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VanillaCollected
-  itemsCollected: {fileID: 447117522}
+  itemsCollected: {fileID: 129795537}
   vanilla: {fileID: 1900624797}
 --- !u!1 &1911064042 stripped
 GameObject:
@@ -5150,6 +5289,8 @@ MonoBehaviour:
   FlourFound: {fileID: 0}
   VanillaFound: {fileID: 0}
   sugarFound: {fileID: 0}
+  Cake: {fileID: 0}
+  CakeBaked: {fileID: 0}
   ingredientsCollected: 0
 --- !u!114 &1911064047
 MonoBehaviour:
@@ -5211,6 +5352,99 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.4087465, y: 1.4405789, z: 1.2834761}
   m_Center: {x: -0.0000004768372, y: -0.8071572, z: 0.6417377}
+--- !u!1001 &1958442458
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.0607
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.0607
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.0607
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.644
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.731
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.41
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7202375984043751186, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d7ab3c805c938b4d8fa2adcbc995ee5, type: 2}
+    - target: {fileID: -5730168626596553650, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9877c209561cdb045b98ff3fd64e7cae, type: 2}
+    - target: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_Name
+      value: BakeCake
+      objectReference: {fileID: 0}
+    - target: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_Name
+      value: 'CakeBaked '
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100336730977582205, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
 --- !u!1001 &1964027667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5297,7 +5531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 25d5aafcc78f8474d96b87f3e848d50f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2305302597091861298, guid: 25d5aafcc78f8474d96b87f3e848d50f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -5879,6 +6113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Milk
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0d13a49c6d9f2af4abe43d356f091c81, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8424073627695423409, guid: 0d13a49c6d9f2af4abe43d356f091c81, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -5898,6 +6136,46 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 925423254}
   m_SourcePrefab: {fileID: 100100000, guid: 0d13a49c6d9f2af4abe43d356f091c81, type: 3}
+--- !u!1 &2130829600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+  m_PrefabInstance: {fileID: 1310977353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2130829602
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130829600}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3574877, y: 0.15169598, z: 0.3544769}
+  m_Center: {x: 0.0039752917, y: 0.07057888, z: -0.0013923226}
+--- !u!114 &2130829603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130829600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97f873dfeb0bf44c89f962bbec2a458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnBakedCollected
+  itemsCollected: {fileID: 129795537}
+  ClickObjToDestroy: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5919,5 +6197,7 @@ SceneRoots:
   - {fileID: 1372892648}
   - {fileID: 1654619018}
   - {fileID: 1841170870}
+  - {fileID: 1310977353}
+  - {fileID: 1958442458}
   - {fileID: 793034113}
   - {fileID: 2011829895}

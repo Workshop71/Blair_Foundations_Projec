@@ -8,7 +8,7 @@ public class VanillaCollected : MonoBehaviour
     public GameObject vanilla;
     public void CollectedItem()
     {
-    itemsCollected.Collecteditem();    
+    itemsCollected.CollectedAssets();    
     }
 
     void OnMouseDown()

@@ -8,7 +8,7 @@ public class MilkCollected : MonoBehaviour
     public GameObject ClickObjToDestroy;
     public void CollectedItem()
     {
-    itemsCollected.Collecteditem();    
+    itemsCollected.CollectedAssets();    
     }
 
     void OnMouseDown()
@@ -16,6 +16,7 @@ public class MilkCollected : MonoBehaviour
     Destroy(ClickObjToDestroy);
     CollectedItem();
     Debug.Log("Milk Collected");
+
     }
     // Update is called once per frame
     void Update()
