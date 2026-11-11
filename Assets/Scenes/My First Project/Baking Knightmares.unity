@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 51600477}
   - component: {fileID: 51600476}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: speachMilk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -695,31 +695,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
   m_PrefabInstance: {fileID: 1738619096}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &78046612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78046608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2da3c81c83557742941623e13bf7e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemsCollected
-  Milk: {fileID: 0}
-  Eggs: {fileID: 0}
-  Flour: {fileID: 0}
-  Vanilla: {fileID: 0}
-  sugar: {fileID: 0}
-  MilkFound: {fileID: 0}
-  EggsFound: {fileID: 0}
-  FlourFound: {fileID: 0}
-  VanillaFound: {fileID: 0}
-  sugarFound: {fileID: 0}
-  Cake: {fileID: 0}
-  CakeBaked: {fileID: 0}
-  ingredientsCollected: 0
 --- !u!114 &78046613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,6 +1365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2da3c81c83557742941623e13bf7e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemsCollected
+  dialogueText: {fileID: 0}
   Milk: {fileID: 925423248}
   Eggs: {fileID: 1684292204}
   Flour: {fileID: 34452641}
@@ -1402,6 +1378,17 @@ MonoBehaviour:
   sugarFound: {fileID: 223120968}
   Cake: {fileID: 2130829600}
   CakeBaked: {fileID: 1563733554}
+  MilkBlackout: {fileID: 1903804902}
+  EggsBlackout: {fileID: 1699237813}
+  FlourBlackout: {fileID: 903227011}
+  VanillaBlackout: {fileID: 1458143510}
+  SugarBlackout: {fileID: 194485262}
+  speachMilk: {fileID: 51600474}
+  speachFlour: {fileID: 1478338674}
+  speachSugar: {fileID: 828971204}
+  speachEggs: {fileID: 907188076}
+  speachVanilla: {fileID: 133508392}
+  speachBake: {fileID: 1212427056}
   ingredientsCollected: 0
 --- !u!114 &129795538
 MonoBehaviour:
@@ -1415,6 +1402,143 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a2960ddcf638949b3a14a181ea5b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerScript
+--- !u!1 &133508392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 133508393}
+  - component: {fileID: 133508395}
+  - component: {fileID: 133508394}
+  m_Layer: 5
+  m_Name: speachVanilla
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &133508393
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133508392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353932112}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000013351, y: 0}
+  m_SizeDelta: {x: 944.7167, y: 198.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &133508394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133508392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: WHERE IS THE VANILLA SAUCE!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 47.69
+  m_fontSizeBase: 47.69
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &133508395
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133508392}
+  m_CullTransparentMesh: 1
 --- !u!1 &160149071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,7 +1830,7 @@ GameObject:
   - component: {fileID: 194485265}
   - component: {fileID: 194485264}
   m_Layer: 5
-  m_Name: Sugar Blackout
+  m_Name: SugarBlackout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2251,6 +2375,11 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 51600475}
+  - {fileID: 1478338675}
+  - {fileID: 828971205}
+  - {fileID: 907188077}
+  - {fileID: 133508393}
+  - {fileID: 1212427057}
   m_Father: {fileID: 360318301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2908,9 +3037,6 @@ PrefabInstance:
       addedObject: {fileID: 1900624799}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6870b8e040ec24249902a82577bef88f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1900624801}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6870b8e040ec24249902a82577bef88f, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1900624802}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6870b8e040ec24249902a82577bef88f, type: 3}
       insertIndex: -1
@@ -3063,31 +3189,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
   m_PrefabInstance: {fileID: 1654619018}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &678714328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678714324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2da3c81c83557742941623e13bf7e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemsCollected
-  Milk: {fileID: 0}
-  Eggs: {fileID: 0}
-  Flour: {fileID: 0}
-  Vanilla: {fileID: 0}
-  sugar: {fileID: 0}
-  MilkFound: {fileID: 0}
-  EggsFound: {fileID: 0}
-  FlourFound: {fileID: 0}
-  VanillaFound: {fileID: 0}
-  sugarFound: {fileID: 0}
-  Cake: {fileID: 0}
-  CakeBaked: {fileID: 0}
-  ingredientsCollected: 0
 --- !u!114 &678714329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3373,6 +3474,143 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &828971204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 828971205}
+  - component: {fileID: 828971207}
+  - component: {fileID: 828971206}
+  m_Layer: 5
+  m_Name: speachSugar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &828971205
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828971204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353932112}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000013351, y: 0}
+  m_SizeDelta: {x: 944.7167, y: 198.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &828971206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828971204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: You think this is me Angry! Go get the Sugar to sweeten me up!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 47.69
+  m_fontSizeBase: 47.69
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &828971207
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828971204}
+  m_CullTransparentMesh: 1
 --- !u!1 &903227011
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,7 +3623,7 @@ GameObject:
   - component: {fileID: 903227014}
   - component: {fileID: 903227013}
   m_Layer: 5
-  m_Name: Flour Blackout
+  m_Name: FlourBlackout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3491,6 +3729,144 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TextChanger
   dialogueText: {fileID: 51600476}
   ingredientsCollected: 0
+--- !u!1 &907188076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 907188077}
+  - component: {fileID: 907188079}
+  - component: {fileID: 907188078}
+  m_Layer: 5
+  m_Name: speachEggs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &907188077
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907188076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353932112}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000013351, y: 0}
+  m_SizeDelta: {x: 944.7167, y: 198.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &907188078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907188076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: God even my mum could do better than this! Baking knightmare? More like
+    Hells Bakery! Go get the Eggs!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 47.69
+  m_fontSizeBase: 47.69
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &907188079
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907188076}
+  m_CullTransparentMesh: 1
 --- !u!1 &925423248 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d13a49c6d9f2af4abe43d356f091c81, type: 3}
@@ -3955,6 +4331,143 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1212427056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212427057}
+  - component: {fileID: 1212427059}
+  - component: {fileID: 1212427058}
+  m_Layer: 5
+  m_Name: speachBake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1212427057
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212427056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353932112}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000013351, y: 0}
+  m_SizeDelta: {x: 944.7167, y: 198.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1212427058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212427056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Finally got all the ingredients! Now you can bake the cake!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 47.69
+  m_fontSizeBase: 47.69
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1212427059
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212427056}
+  m_CullTransparentMesh: 1
 --- !u!1 &1216047701
 GameObject:
   m_ObjectHideFlags: 0
@@ -4184,6 +4697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cake
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9100336730977582205, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
       propertyPath: m_LocalScale.z
       value: 0
@@ -4268,9 +4785,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1743493719}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1743493720}
@@ -4367,9 +4881,6 @@ PrefabInstance:
       addedObject: {fileID: 1392719959}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6870b8e040ec24249902a82577bef88f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1392719958}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6870b8e040ec24249902a82577bef88f, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1392719957}
   m_SourcePrefab: {fileID: 100100000, guid: 6870b8e040ec24249902a82577bef88f, type: 3}
 --- !u!1 &1392719956 stripped
@@ -4398,31 +4909,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.066434145, y: 0.05872654, z: 0.14581235}
   m_Center: {x: -0.0018156767, y: 0.0038409196, z: -0.0008319244}
---- !u!114 &1392719958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392719956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2da3c81c83557742941623e13bf7e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemsCollected
-  Milk: {fileID: 0}
-  Eggs: {fileID: 0}
-  Flour: {fileID: 0}
-  Vanilla: {fileID: 0}
-  sugar: {fileID: 0}
-  MilkFound: {fileID: 0}
-  EggsFound: {fileID: 0}
-  FlourFound: {fileID: 0}
-  VanillaFound: {fileID: 0}
-  sugarFound: {fileID: 0}
-  Cake: {fileID: 0}
-  CakeBaked: {fileID: 0}
-  ingredientsCollected: 0
 --- !u!114 &1392719959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4601,7 +5087,7 @@ GameObject:
   - component: {fileID: 1458143513}
   - component: {fileID: 1458143512}
   m_Layer: 5
-  m_Name: Vanilla Blackout
+  m_Name: VanillaBlackout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4687,6 +5173,143 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.7649508, y: 1.522083, z: 2.9147575}
   m_Center: {x: 0, y: 0, z: 0.89665544}
+--- !u!1 &1478338674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1478338675}
+  - component: {fileID: 1478338677}
+  - component: {fileID: 1478338676}
+  m_Layer: 5
+  m_Name: speachFlour
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1478338675
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478338674}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 353932112}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000013351, y: 0}
+  m_SizeDelta: {x: 944.7167, y: 198.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1478338676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478338674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Hurry up you Idiot! Go get the Flour!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 47.69
+  m_fontSizeBase: 47.69
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1478338677
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478338674}
+  m_CullTransparentMesh: 1
 --- !u!1 &1493530391
 GameObject:
   m_ObjectHideFlags: 0
@@ -5325,9 +5948,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 678714328}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 678714329}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
       insertIndex: -1
@@ -5398,7 +6018,7 @@ GameObject:
   - component: {fileID: 1699237816}
   - component: {fileID: 1699237815}
   m_Layer: 5
-  m_Name: Eggs Blackout
+  m_Name: EggsBlackout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5762,9 +6382,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 78046612}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 78046613}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
       insertIndex: -1
@@ -5775,31 +6392,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
   m_PrefabInstance: {fileID: 1372892648}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1743493719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743493715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2da3c81c83557742941623e13bf7e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemsCollected
-  Milk: {fileID: 0}
-  Eggs: {fileID: 0}
-  Flour: {fileID: 0}
-  Vanilla: {fileID: 0}
-  sugar: {fileID: 0}
-  MilkFound: {fileID: 0}
-  EggsFound: {fileID: 0}
-  FlourFound: {fileID: 0}
-  VanillaFound: {fileID: 0}
-  sugarFound: {fileID: 0}
-  Cake: {fileID: 0}
-  CakeBaked: {fileID: 0}
-  ingredientsCollected: 0
 --- !u!114 &1743493720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5976,40 +6568,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d13a49c6d9f2af4abe43d356f091c81, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1804588832}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d13a49c6d9f2af4abe43d356f091c81, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1804588831}
   m_SourcePrefab: {fileID: 100100000, guid: 0d13a49c6d9f2af4abe43d356f091c81, type: 3}
 --- !u!1 &1804588830 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d13a49c6d9f2af4abe43d356f091c81, type: 3}
   m_PrefabInstance: {fileID: 1804588829}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1804588831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804588830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2da3c81c83557742941623e13bf7e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemsCollected
-  Milk: {fileID: 0}
-  Eggs: {fileID: 0}
-  Flour: {fileID: 0}
-  Vanilla: {fileID: 0}
-  sugar: {fileID: 0}
-  MilkFound: {fileID: 0}
-  EggsFound: {fileID: 0}
-  FlourFound: {fileID: 0}
-  VanillaFound: {fileID: 0}
-  sugarFound: {fileID: 0}
-  Cake: {fileID: 0}
-  CakeBaked: {fileID: 0}
-  ingredientsCollected: 0
 --- !u!65 &1804588832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6106,9 +6670,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1911064046}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1911064047}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
       insertIndex: -1
@@ -6132,31 +6693,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectFound
   clickObjToDestroy: {fileID: 1900624797}
---- !u!114 &1900624801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1900624797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2da3c81c83557742941623e13bf7e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemsCollected
-  Milk: {fileID: 0}
-  Eggs: {fileID: 0}
-  Flour: {fileID: 0}
-  Vanilla: {fileID: 0}
-  sugar: {fileID: 0}
-  MilkFound: {fileID: 0}
-  EggsFound: {fileID: 0}
-  FlourFound: {fileID: 0}
-  VanillaFound: {fileID: 0}
-  sugarFound: {fileID: 0}
-  Cake: {fileID: 0}
-  CakeBaked: {fileID: 0}
-  ingredientsCollected: 0
 --- !u!65 &1900624802
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6204,7 +6740,7 @@ GameObject:
   - component: {fileID: 1903804905}
   - component: {fileID: 1903804904}
   m_Layer: 5
-  m_Name: Milk Blackout
+  m_Name: MilkBlackout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6269,31 +6805,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
   m_PrefabInstance: {fileID: 1841170870}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1911064046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1911064042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2da3c81c83557742941623e13bf7e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemsCollected
-  Milk: {fileID: 0}
-  Eggs: {fileID: 0}
-  Flour: {fileID: 0}
-  Vanilla: {fileID: 0}
-  sugar: {fileID: 0}
-  MilkFound: {fileID: 0}
-  EggsFound: {fileID: 0}
-  FlourFound: {fileID: 0}
-  VanillaFound: {fileID: 0}
-  sugarFound: {fileID: 0}
-  Cake: {fileID: 0}
-  CakeBaked: {fileID: 0}
-  ingredientsCollected: 0
 --- !u!114 &1911064047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6445,8 +6956,53 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1960926709}
+    - targetCorrespondingSourceObject: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1960926708}
   m_SourcePrefab: {fileID: 100100000, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+--- !u!1 &1960926704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+  m_PrefabInstance: {fileID: 1958442458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960926708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960926704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a091ccdadd4c841be4b57205ffaa4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThatsAllFolks
+--- !u!95 &1960926709
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960926704}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79222aa687c0db9439106eec0a9d6094, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1964027667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7177,7 +7733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnBakedCollected
   itemsCollected: {fileID: 129795537}
-  ClickObjToDestroy: {fileID: 0}
+  ClickObjToDestroy: {fileID: 2130829600}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class TextChanger : MonoBehaviour
         if (ingredientsCollected == 0)
         {
             dialogueText.text = "Right! Do you think you can make a cake? Good. First go get the Milk!";
-            Debug.Log("text updated");
+            //Debug.Log("text updated");
         }
         if (ingredientsCollected == 1)
         {
