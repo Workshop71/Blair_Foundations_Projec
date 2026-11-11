@@ -16,7 +16,7 @@ public class ItemsCollected : MonoBehaviour
     public GameObject sugarFound;
     public GameObject Cake;
     public GameObject CakeBaked;
-
+    
     public int ingredientsCollected = 0;
     
     public void CollectedAssets()

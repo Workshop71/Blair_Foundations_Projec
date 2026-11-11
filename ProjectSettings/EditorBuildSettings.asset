@@ -5,9 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/My First Project/StartScreen.unity
+    guid: e1ee5d644fda14a4cbd4a8cf48744f89
+  - enabled: 1
+    path: Assets/Scenes/My First Project/Baking Knightmares.unity
+    guid: 2e9d6ffdd6c90764a883fb4fe3f25c82
+  - enabled: 1
+    path: Assets/Scenes/My First Project/End Screen.unity
+    guid: 70663d584e6264b43bb65e03d33fe33e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
