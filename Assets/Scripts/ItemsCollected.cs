@@ -91,20 +91,14 @@ public class ItemsCollected : MonoBehaviour
         speachBake.SetActive(true);
         VanillaFound.SetActive(true);  
         animator.SetBool("VanillaCollected", true);  
-        
+        //SceneManager.LoadSceneAsync(2);
         }
         if(ingredientsCollected == 6)
         {
-        speachBake.SetActive(false);
-        Debug.Log("All Ingredients Collected! Now you can bake the cake!");
-        }
-        /*if(ingredientsCollected == 6)
-        {
-        Debug.Log("All Ingredients Collected! Now you can bake the cake!");
-        Cake.SetActive(false);
         CakeBaked.SetActive(true);
         animator.SetBool("CakeBaked", true);
         //SceneManager.LoadSceneAsync(2);
-        }*/
+        }
+        Debug.Log(ingredientsCollected);
     }
 }
