@@ -31,9 +31,15 @@ public class ItemsCollected : MonoBehaviour
     public GameObject speachEggs;
     public GameObject speachVanilla;
     public GameObject speachBake;
-    
+    public Howtoturnwithmouse howToTurnWithMouse;
+    public GameObject Capsule;
     public int ingredientsCollected = 0;
-    
+    public CakeAnimate cakeAnimate;
+
+    public void AnimationCount()
+    {
+       cakeAnimate.animateCake(); 
+    }
     public void CollectedAssets()
     {
         ingredientsCollected++;
@@ -55,7 +61,6 @@ public class ItemsCollected : MonoBehaviour
         speachFlour.SetActive(true);
         MilkFound.SetActive(true);    
         Flour.SetActive(true);
-        animator.SetBool("MilkCollected", true);
         FlourBlackout.SetActive(false);
         }
         if(ingredientsCollected == 2)
@@ -91,13 +96,12 @@ public class ItemsCollected : MonoBehaviour
         speachBake.SetActive(true);
         VanillaFound.SetActive(true);  
         animator.SetBool("VanillaCollected", true);  
-        //SceneManager.LoadSceneAsync(2);
+        
         }
         if(ingredientsCollected == 6)
         {
         CakeBaked.SetActive(true);
-        animator.SetBool("CakeBaked", true);
-        //SceneManager.LoadSceneAsync(2);
+        AnimationCount();
         }
         Debug.Log(ingredientsCollected);
     }

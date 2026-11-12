@@ -1389,7 +1389,10 @@ MonoBehaviour:
   speachEggs: {fileID: 907188076}
   speachVanilla: {fileID: 133508392}
   speachBake: {fileID: 1212427056}
+  howToTurnWithMouse: {fileID: 160149076}
+  Capsule: {fileID: 1493530391}
   ingredientsCollected: 0
+  cakeAnimate: {fileID: 1960926714}
 --- !u!114 &129795538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1402,6 +1405,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a2960ddcf638949b3a14a181ea5b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerScript
+--- !u!23 &129795539 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5730168626596553650, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+  m_PrefabInstance: {fileID: 1310977353}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &133508392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4682,9 +4690,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7202375984043751186, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7202375984043751186, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 3d7ab3c805c938b4d8fa2adcbc995ee5, type: 2}
+    - target: {fileID: -5730168626596553650, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5730168626596553650, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -5953,6 +5969,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 678714330}
   m_SourcePrefab: {fileID: 100100000, guid: cbecf88746dc10047a04d05bb356e596, type: 3}
+--- !u!23 &1670780359 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7202375984043751186, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+  m_PrefabInstance: {fileID: 1310977353}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1684292204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 25d5aafcc78f8474d96b87f3e848d50f, type: 3}
@@ -6962,25 +6983,16 @@ PrefabInstance:
       addedObject: {fileID: 1960926709}
     - targetCorrespondingSourceObject: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1960926708}
+      addedObject: {fileID: 1960926714}
+    - targetCorrespondingSourceObject: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1960926713}
   m_SourcePrefab: {fileID: 100100000, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
 --- !u!1 &1960926704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4213707717460252886, guid: ecf57cd8dc55fd04d8accfaef19266d1, type: 3}
   m_PrefabInstance: {fileID: 1958442458}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1960926708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960926704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74a091ccdadd4c841be4b57205ffaa4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ThatsAllFolks
 --- !u!95 &1960926709
 Animator:
   serializedVersion: 7
@@ -7003,6 +7015,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1960926713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960926704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a091ccdadd4c841be4b57205ffaa4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThatsAllFolks
+  HowToTurnWithMouse: {fileID: 160149076}
+--- !u!114 &1960926714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960926704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac75802a1af56c44865e5c4db254e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CakeAnimate
 --- !u!1001 &1964027667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7733,7 +7770,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnBakedCollected
   itemsCollected: {fileID: 129795537}
-  ClickObjToDestroy: {fileID: 2130829600}
+  tinVisible: {fileID: 1670780359}
+  unbakedCakeVisible: {fileID: 129795539}
+  CakeCollider: {fileID: 2130829602}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
